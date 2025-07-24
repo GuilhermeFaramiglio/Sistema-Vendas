@@ -196,6 +196,33 @@ $valor_total = array_sum(array_column($vendas, 'VEN_TOTAL'));
     </div>
 </div>
 
+<!-- Cards de resumo -->
+    <div class="row mb-4">
+        <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+            <div class="card text-center h-100">
+                <div class="card-body">
+                    <h6 class="card-title text-muted mb-2">
+                        <i class="bi bi-boxes"></i> Total de Vendas
+                    </h6>
+                    <h2 class="mb-0"><?php echo $total_vendas; ?></h2>
+                    <small class="text-muted">vendas realizadas</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+            <div class="card text-center h-100">
+                <div class="card-body">
+                    <h6 class="card-title text-muted mb-2">
+                        <i class="bi bi-currency-dollar"></i> Valor Total
+                    </h6>
+                    <h2 class="mb-0">R$ <?php echo number_format($valor_total, 2, ',', '.'); ?></h2>
+                    <small class="text-muted">faturamento no período</small>
+                </div>
+            </div>
+        </div>
+        <!-- Adicione mais cards de resumo aqui se necessário -->
+    </div>
+
 <!-- Filtros -->
 <div class="row mb-4">
     <div class="col-12">
@@ -229,32 +256,6 @@ $valor_total = array_sum(array_column($vendas, 'VEN_TOTAL'));
                         </div>
                     </div>
                 </form>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Resumo -->
-<div class="row mb-4">
-    <div class="col-md-6">
-        <div class="card bg-primary text-white">
-            <div class="card-body">
-                <h5 class="card-title">
-                    <i class="bi bi-graph-up"></i> Total de Vendas
-                </h5>
-                <h2><?php echo $total_vendas; ?></h2>
-                <small>vendas no período</small>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-6">
-        <div class="card bg-success text-white">
-            <div class="card-body">
-                <h5 class="card-title">
-                    <i class="bi bi-currency-dollar"></i> Valor Total
-                </h5>
-                <h2>R$ <?php echo number_format($valor_total, 2, ',', '.'); ?></h2>
-                <small>faturamento no período</small>
             </div>
         </div>
     </div>
